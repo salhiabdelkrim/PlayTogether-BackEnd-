@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org"
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <title>Play Together</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/myStyle.css}"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    
+</head>
+<body>
+    
+
+
+    <header>
+        <div class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item me-3">
+                        <a class="nav-link" th:href="@{/operations}">Operations</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link" th:href="@{/comptes}">Comptes</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link" th:href="@{/clients}">Clients</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+     
+    </header>
+    <section layout:fragment="content"></section>
+
+<footer class="bg-light text-center py-3 mt-5 border-top">
+    <div class="container">
+        <small class="text-muted">&copy; Avec PlayTogether, vivez des expériences uniques et enrichissantes avec nos activités ! 
+        Découvrez, apprenez et amusez-vous dans un cadre convivial et stimulant. Rejoignez-nous dès aujourd’hui.</small>
+    </div>
+</footer>
+</body>
+</html>
