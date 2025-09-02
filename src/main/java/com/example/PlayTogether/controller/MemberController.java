@@ -18,6 +18,7 @@ import com.example.PlayTogether.dto.LoginRequest;
 import com.example.PlayTogether.model.Member;
 import com.example.PlayTogether.repository.MemberRepository;
 import com.example.PlayTogether.service.AuthServiceImpl; // Assurez-vous d'avoir un service d'authentification
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/members")
@@ -32,7 +33,7 @@ public class MemberController {
 
     // 🔹 Ajouter un membre
    @PostMapping("/register")
-public ResponseEntity<?> addMember(@RequestBody Member member) {
+public ResponseEntity<?> addMember(@Valid @RequestBody Member member) {
     if (memberRepository.findByUsername(member.getUsername()).isPresent()) {
         return ResponseEntity.badRequest().body("Username already exists");
     }
