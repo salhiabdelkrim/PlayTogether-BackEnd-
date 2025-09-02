@@ -27,6 +27,14 @@ public class Sport implements Serializable {
         this.description = description;
         this.numberOfPlayers = numberOfPlayers;
     }
+
+    public String getImageName() {
+        return imageName;
+    }
+
+    public void setImageName(String imageName) {
+        this.imageName = imageName;
+    }
     public Long getId() {
         return sportId;
     }
